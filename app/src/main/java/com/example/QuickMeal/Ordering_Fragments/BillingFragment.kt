@@ -59,7 +59,9 @@ class BillingFragment:Fragment(R.layout.fragment_billing) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+binding.imageCloseBilling.setOnClickListener {
+    findNavController().navigateUp()
+}
         binding.imageAddAddress.setOnClickListener {
             findNavController().navigate(R.id.action_billingFragment_to_addAddressFragment)
         }
